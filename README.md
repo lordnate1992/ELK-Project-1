@@ -93,6 +93,6 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 
-Copy the Install-ELK.yml file to the Ansible directory.
-Update the hosts file to include webserver and ELK.
-Run the playbook, and navigate to the Kibana URL specific to your IP to check that the installation worked as expected.
+1. Copy the Install-ELK.yml file to the Ansible directory. 
+2. Update the hosts file to include webserver and ELK.
+3. Run the playbook, and navigate to the Kibana URL specific to your IP to check that the installation worked as expected.
