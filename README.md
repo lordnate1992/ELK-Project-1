@@ -31,6 +31,7 @@ The configuration details of each machine may be found below.
 ![image](https://user-images.githubusercontent.com/78322958/120878735-eea35000-c583-11eb-965a-ae5f377aa6b2.png)
 
 Access Policies
+
 The machines on the internal network are not exposed to the public Internet.
 
 Only the Jump-Box-Provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses: 
@@ -44,6 +45,7 @@ A summary of the access policies in place can be found in the table below.
 ![image](https://user-images.githubusercontent.com/78322958/120878783-50fc5080-c584-11eb-9394-925242704055.png)
 
 Elk Configuration
+
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it simplifies the process and prevents any easily overlooked vulnerabilties.
 
 The playbook implements the following tasks:
