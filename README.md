@@ -77,6 +77,7 @@ These Beats allow us to collect the following information from each machine:
 * Metricbeat collects metrics and statistics and lists them in the output specified, i.e. Elasticsearch or Logstash.
 
 Using the Playbook
+
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
 
 SSH into the control node and follow the steps below:
