@@ -38,11 +38,8 @@ Only the Jump-Box-Provisioner machine can accept connections from the Internet. 
 
 * 5601 Kibana Port
  
-Machines within the network, including the ELK Server, can only be accessed by the Jump Box Provisioner (IP 52.149.183.45).
+Machines within the network, including the ELK Server, can only be accessed by the Jump Box Provisioner (IP 52.149.183.45). Only the Jump-Box-Provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the IP address designated to the Host Machine
 
-A summary of the access policies in place can be found in the table below.
-
-![image](https://user-images.githubusercontent.com/78322958/120878783-50fc5080-c584-11eb-9394-925242704055.png)
 
 Elk Configuration
 
