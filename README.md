@@ -10,14 +10,14 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
 This document contains the following details:
 
-Description of the Topology
-Access Policies
-ELK Configuration
-Beats in Use
-Machines Being Monitored
-How to Use the Ansible Build
-Description of the Topology
-The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
+* Description of the Topology
+* Access Policies
+* ELK Configuration
+* Beats in Use
+* Machines Being Monitored
+* How to Use the Ansible Build
+* Description of the Topology
+* The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting attacks to the network. If a server becomes unavailable, or is down for updates, services can still continue. The advantage to using a jumpbox is that only it can access the Virtual Network using SSH.
 
@@ -46,47 +46,52 @@ Machines within the network, including the ELK Server, can only be accessed by t
 A summary of the access policies in place can be found in the table below.
 
 Name	   Publicly Accessible	Allowed IP Address
-Jump Box	     Yes	             66.69.206.54
+Jump Box	      Yes	             66.69.206.54
 Web-1	         No	               10.0.0.4
 Web-2	         No	               10.0.0.4
-ELK-Server	   No	               10.0.0.4
+ELK-Server	    No	               10.0.0.4
 
 Elk Configuration
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it simplifies the process and prevents any easily overlooked vulnerabilties.
 
 The playbook implements the following tasks:
 
-1. Installs docker.io
-2. Installs python3-pip
-3. Increase virtual memory
-4. Install docker via pip
-5. Download and install a docker ELK container - starts docker and sets up the ports being utilized.
+* Installs docker.io
+* Installs python3-pip
+* Increase virtual memory
+* Install docker via pip
+* Download and install a docker ELK container - starts docker and sets up the ports being utilized.
 
 The following screenshot displays the result of running docker ps after successfully configuring the ELK instance.
 
+![image](https://user-images.githubusercontent.com/78322958/120878272-e0a00000-c580-11eb-9b1c-44fcf879878b.png)
 
 
 Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 
-TODO: List the IP addresses of the machines you are monitoring
+*Web-1 - 10.0.0.7
+*Web-2 - 10.0.0.8
+
 We have installed the following Beats on these machines:
 
-TODO: Specify which Beats you successfully installed
+*Filebeat
+*Metricbeat
+
+Web-1 - 10.0.0.7
+Web-2 - 10.0.0.8
+ELK-Server - 10.1.0.4
+
 These Beats allow us to collect the following information from each machine:
 
-TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., Winlogbeat collects Windows logs, which we use to track user logon events, etc.
+* Filebeat collects data from logs lists it out in monitoring clusters. 
+* Metricbeat collects metrics and statistics and lists them in the output specified, i.e. Elasticsearch or Logstash.
+
 Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
 
 SSH into the control node and follow the steps below:
 
-Copy the _____ file to _____.
-Update the _____ file to include...
-Run the playbook, and navigate to ____ to check that the installation worked as expected.
-TODO: Answer the following questions to fill in the blanks:
-
-Which file is the playbook? Where do you copy it?
-Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?
-_Which URL do you navigate to in order to check that the ELK server is running?
-As a Bonus, provide the specific commands the user will need to run to download the playbook, update the files, etc.
+Copy the Install-ELK.yml file to the Ansible directory.
+Update the hosts file to include webserver and ELK.
+Run the playbook, and navigate to the Kibana URL specific to your IP to check that the installation worked as expected.
