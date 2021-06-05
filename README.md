@@ -29,7 +29,7 @@ The configuration details of each machine may be found below.
 
 Name	    Function	                IP Address	                Operating System
 Jump Box	Gateway	    Public: 52.149.183.45 Private: 10.0.0.4	       Linux
-Web-1     Server      Public:N/A -- Private: 10.0.0.7                Linux
+Web-1     Server      Public:N/A -- Private: 10.0.0.7               Linux
 Web-2     Server	    Public:N/A -- Private: 10.0.0.8                Linux  
 ELKSrvr   Monitoring	Public: 157.56.161.184 Private: 10.1.0.4       Linux
 
