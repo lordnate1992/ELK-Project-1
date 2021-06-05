@@ -79,9 +79,9 @@ We have installed the following Beats on these machines:
 * Filebeat
 * Metricbeat
 
-* Web-1 - 10.0.0.7
-* Web-2 - 10.0.0.8
-* ELK-Server - 10.1.0.4
+- Web-1 - 10.0.0.7
+- Web-2 - 10.0.0.8
+- ELK-Server - 10.1.0.4
 
 These Beats allow us to collect the following information from each machine:
 
