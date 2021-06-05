@@ -28,28 +28,28 @@ Metricbeat is an extremely easy-to-use, efficient and reliable metric shipper fo
 
 The configuration details of each machine may be found below. 
 
-Name	    Function	                IP Address	                Operating System
-Jump Box	Gateway	    Public: 52.149.183.45 Private: 10.0.0.4	       Linux
-Web-1     Server      Public:N/A -- Private: 10.0.0.7               Linux
-Web-2     Server	    Public:N/A -- Private: 10.0.0.8                Linux  
-ELKSrvr   Monitoring	Public: 157.56.161.184 Private: 10.1.0.4       Linux
+ Name	    Function	                IP Address	                Operating System
+Jump Box    Gateway         Public: 52.149.183.45 Private: 10.0.0.4          Linux
+Web-1       Server          Public:N/A -- Private: 10.0.0.7                  Linux
+Web-2       Server          Public:N/A -- Private: 10.0.0.8                  Linux
+ELKSrvr     Monitoring      Public: 157.56.161.184 Private: 10.1.0.4         Linux
 
 Access Policies
 The machines on the internal network are not exposed to the public Internet.
 
 Only the Jump-Box-Provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses: 
 
-> 5601 Kibana Port
+* 5601 Kibana Port
  
 Machines within the network, including the ELK Server, can only be accessed by the Jump Box Provisioner (IP 52.149.183.45).
 
 A summary of the access policies in place can be found in the table below.
 
-Name	   Publicly Accessible	Allowed IP Address
-Jump Box	      Yes	             66.69.206.54
-Web-1	         No	               10.0.0.4
-Web-2	         No	               10.0.0.4
-ELK-Server	    No	               10.0.0.4
+Name       Publicly Accessible	Allowed IP Address
+Jump Box          Yes              66.69.206.54
+Web-1             No                 10.0.0.4
+Web-2             No                 10.0.0.4
+ELK-Server        No                 10.0.0.4
 
 Elk Configuration
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it simplifies the process and prevents any easily overlooked vulnerabilties.
@@ -70,17 +70,18 @@ The following screenshot displays the result of running docker ps after successf
 Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 
-*Web-1 - 10.0.0.7
-*Web-2 - 10.0.0.8
+* Web-1 - 10.0.0.7
+
+* Web-2 - 10.0.0.8
 
 We have installed the following Beats on these machines:
 
-*Filebeat
-*Metricbeat
+* Filebeat
+* Metricbeat
 
-Web-1 - 10.0.0.7
-Web-2 - 10.0.0.8
-ELK-Server - 10.1.0.4
+* Web-1 - 10.0.0.7
+* Web-2 - 10.0.0.8
+* ELK-Server - 10.1.0.4
 
 These Beats allow us to collect the following information from each machine:
 
