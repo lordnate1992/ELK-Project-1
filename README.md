@@ -16,8 +16,8 @@ This document contains the following details:
 * Beats in Use
 * Machines Being Monitored
 * How to Use the Ansible Build
-* Description of the Topology
-* The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
+
+The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting attacks to the network. If a server becomes unavailable, or is down for updates, services can still continue. The advantage to using a jumpbox is that only it can access the Virtual Network using SSH.
 
